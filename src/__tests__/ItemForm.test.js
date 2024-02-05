@@ -16,6 +16,7 @@ test("calls the onItemFormSubmit callback prop when the form is submitted", () =
   });
 
   fireEvent.submit(screen.queryByText(/Add to List/));
+  console.log(onItemFormSubmit.mock.calls);
 
   expect(onItemFormSubmit).toHaveBeenCalledWith(
     expect.objectContaining({
